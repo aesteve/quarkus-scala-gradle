@@ -9,7 +9,7 @@ gradle quarkusDev
 
 Open [localhost](http://localhost:8080/greetings/hello)
 
-## Native Image build
+## Native Image build (local)
 
 ### Setup GraalVM
 
@@ -54,4 +54,10 @@ Undefined symbols for architecture x86_64:
   "_inflateReset", referenced from:
       ___svm_cglobaldata_base in quarkus-scala-gradle-0.0.1-SNAPSHOT-runner.o
 ld: symbol(s) not found for architecture x86_64
+```
+
+## Native image build (Docker)
+
+```
+docker build .
 ```
