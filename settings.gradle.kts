@@ -1,0 +1,17 @@
+rootProject.name = "quarkus-scala-gradle"
+
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "io.quarkus") {
+                useModule("io.quarkus:quarkus-gradle-plugin:${requested.version}")
+            }
+        }
+    }
+}
+
+
